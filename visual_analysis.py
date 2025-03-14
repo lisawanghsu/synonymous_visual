@@ -91,16 +91,23 @@ st.download_button(
 )
 
 st.header('Training data of five methods of cancer driver synonymous mutation prediction')
-cs_data = pd.read_csv(r'other_method_training_data\cscape_coding_training_examples.txt', sep='\t')
-st.write('CS training data:', cs_data.shape, cs_data)
-EPEL_data = pd.read_csv(r'other_method_training_data\EPEL_train_close7.txt', sep='\t')
-st.write('EPEL training data:', EPEL_data.shape, EPEL_data)
-epSMic_data = pd.read_csv(r'other_method_training_data\epSMic_training.vcf', sep='\t')
-st.write('epSMic training data:', epSMic_data.shape, epSMic_data)
-MFDSMC_data = pd.read_csv(r'other_method_training_data\MFDSMC_training.vcf', sep='\t', header=None)
-st.write('MFDSMC training data:', MFDSMC_data.shape, MFDSMC_data)
-PredDSMC_data = MFDSMC_data
-st.write('PredDSMC training data are the same as MFDSMC:', PredDSMC_data.shape, PredDSMC_data)
+method = st.selectbox('Method', ['CS', 'EPEL', 'epSMic', 'MFDSMC', 'PredDSMC'])
+if method == 'CS':
+    # st.write('CS training data:')
+    cs_data = pd.read_csv(r'cscape_coding_training_examples.txt', sep='\t')
+    st.write('CS training data:', cs_data.shape, cs_data)
+elif method == 'EPEL':
+    EPEL_data = pd.read_csv(r'EPEL_train_close7.txt', sep='\t')
+    st.write('EPEL training data:', EPEL_data.shape, EPEL_data)
+elif method == 'epSMic':
+    epSMic_data = pd.read_csv(r'epSMic_training.vcf', sep='\t')
+    st.write('epSMic training data:', epSMic_data.shape, epSMic_data)
+elif method == 'MFDSMC':
+    MFDSMC_data = pd.read_csv(r'MFDSMC_training.vcf', sep='\t', header=None)
+    st.write('MFDSMC training data:', MFDSMC_data.shape, MFDSMC_data)
+elif method == 'PredDSMC':
+    PredDSMC_data = pd.read_csv(r'MFDSMC_training.vcf', sep='\t', header=None)
+    st.write('PredDSMC training data are the same as MFDSMC:', PredDSMC_data.shape, PredDSMC_data)
 
 st.header('Prediction results of five methods of cancer driver synonymous mutation prediction')
 pred = pd.read_csv('COSMIC-V98-driver-5predictors.zip')
