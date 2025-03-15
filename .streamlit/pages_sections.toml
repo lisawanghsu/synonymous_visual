@@ -24,6 +24,11 @@ name = "By sample counts"
 icon = "🧬"
 
 [[pages]]
+path = "./syn_app/mutation_selection_by_primary_sites.py"
+name = "By primary sites"
+icon = "🧬"
+
+[[pages]]
 name = "Cancer driver synonymous mutation predictors"
 icon = "🗃️"
 is_section = true
