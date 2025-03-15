@@ -8,8 +8,9 @@ Instructions
 
    - streamlit
    - pandas
+   - st-pages
 
-   `pip install streamlit pandas`
+   `pip install streamlit pandas st-pages`
 2. run the following command
    -------------------------
 
