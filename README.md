@@ -13,4 +13,4 @@ Instructions
 2. run the following command
    -------------------------
 
-   `streamlit run streamlit_app.py`
+   `streamlit run visual_analysis.py`
