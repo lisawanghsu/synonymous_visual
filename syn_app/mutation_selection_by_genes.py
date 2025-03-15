@@ -19,7 +19,7 @@ st.bar_chart(syn_mut_infos['GENE'].value_counts(ascending=False)[:10],
              x_label='Gene',
              y_label='Number of synonymous mutations',
              use_container_width=True)
-st.write('Genes with the only one synonymous mutations:')
+st.write('Genes with only one synonymous mutation:')
 
 # 获取仅包含一个突变的基因信息
 single_mutation_genes = syn_mut_infos[syn_mut_infos['GENE'].map(syn_mut_infos['GENE'].value_counts()) == 1]
