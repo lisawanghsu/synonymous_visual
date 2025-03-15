@@ -16,7 +16,7 @@ st.subheader('Choice 3: Select from sample counts')
 min_sample_count = st.slider('Minimum sample count', 
                             min_value=1, 
                             max_value=10, 
-                            value=1)
+                            value=10)
 filtered_by_sample_count = syn_mut_infos[syn_mut_infos['SAMPLE_COUNT'] >= min_sample_count]
 st.write(f'There are **{filtered_by_sample_count.shape[0]:,}** mutations with sample count >= {min_sample_count}.')
 st.dataframe(filtered_by_sample_count)

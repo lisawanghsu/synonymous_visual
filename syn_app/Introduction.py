@@ -13,7 +13,8 @@ st.markdown(
 - **Visualization and download selected data**
     - By choromosomes
     - By genes 
-    - By sample counts   
+    - By sample counts 
+    - By primary sites  
 - **Trainging data of five predictors for cancer driver synonymous mutations**
     - CS    
     - PredDSMC
