@@ -1,22 +1,22 @@
 [[pages]]
-path = "./example_app/Introduction.py"
+path = "./syn_app/Introduction.py"
 name = "Introduction"
 icon = "📄"
 
 
 
 [[pages]]
-path = "./example_app/mutation_selection_by_chroms.py"
+path = "./syn_app/mutation_selection_by_chroms.py"
 name = "By chromosomes"
 icon = "🧬"
 
 [[pages]]
-path = "./example_app/mutation_selection_by_genes.py"
+path = "./syn_app/mutation_selection_by_genes.py"
 name = "By genes"
 icon = "🧬"
 
 [[pages]]
-path = "./example_app/mutation_selection_by_recurrents.py"
+path = "./syn_app/mutation_selection_by_recurrents.py"
 name = "By sample counts"
 icon = "🧬"
 
@@ -24,12 +24,12 @@ icon = "🧬"
 
 [[pages]]
 name = 'Training data'
-path = "./example_app/trainingdata_5methods.py"
+path = "./syn_app/trainingdata_5methods.py"
 icon = "🧾"
 url_path = 'trainingdata'
 
 [[pages]]
-path = "./example_app/predictions_5methods.py"
+path = "./syn_app/predictions_5methods.py"
 name = "Predictions"
 icon = "🧾"
 url_path = "predictions"
