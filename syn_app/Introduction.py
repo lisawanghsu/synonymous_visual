@@ -28,7 +28,7 @@ st.markdown(
     - MFDSMC
     - EPEL
     '''   )
-
+st.write('**Note:** all the mutations are based on GRCh37. Moreover, the GRCh38 coordinates of the mutations were included in the `Predictions` via the `vid_38` column.')
 st.write('---')
 st.write("""
 The references are as follows:
