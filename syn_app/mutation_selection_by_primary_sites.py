@@ -11,7 +11,7 @@ syn_mut_infos = pd.read_csv('syn_primary_sites.zip')
 st.write(f'There are **{syn_mut_infos.shape[0]:,}** synonymous mutation records in COSMIC v98. The first five rows:', syn_mut_infos.head())
 
 st.bar_chart(syn_mut_infos['PRIMARY_SITE'].value_counts(),color='#FF5733')
-st.subheader('Choice 5: Select from primary sites')
+st.subheader('Choice 4: Select from primary sites')
 
 tissue = st.selectbox('Pirmary sites', 
                             options=syn_mut_infos['PRIMARY_SITE'].unique(),

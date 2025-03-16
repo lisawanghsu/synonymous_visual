@@ -5,7 +5,7 @@ import streamlit as st
 from st_pages import add_page_title, get_nav_from_toml
 
 
-st.title("Visual analysis of Cancer mutations in COSMIC v98")
+st.title("Visual analysis of Cancer synonymous mutations in COSMIC v98")
 st.header("Contents:")
 
 st.markdown(
@@ -15,13 +15,13 @@ st.markdown(
     - By genes 
     - By sample counts 
     - By primary sites  
-- **Trainging data of five predictors for cancer driver synonymous mutations**
+- **Trainging data of five methods for cancer driver synonymous mutation prediction**
     - CS    
     - PredDSMC
     - EPEL
     - epSMic
     - MFDSMC
-- **Predictions of five methods of cancer driver synonymous mutations** 
+- **Results of five methods for cancer driver synonymous mutation prediction** 
     - CS
     - CSS
     - PredDSMC
