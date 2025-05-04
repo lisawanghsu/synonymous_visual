@@ -1,0 +1,35 @@
+[[pages]]
+path = "./syn_app/Introduction.py"
+name = "Introduction"
+icon = "📄"
+
+
+
+[[pages]]
+path = "./syn_app/mutation_selection_by_chroms.py"
+name = "By chromosomes"
+icon = "🧬"
+
+[[pages]]
+path = "./syn_app/mutation_selection_by_genes.py"
+name = "By genes"
+icon = "🧬"
+
+[[pages]]
+path = "./syn_app/mutation_selection_by_recurrents.py"
+name = "By sample counts"
+icon = "🧬"
+
+
+
+[[pages]]
+name = 'Training data'
+path = "./syn_app/trainingdata_5methods.py"
+icon = "🧾"
+url_path = 'trainingdata'
+
+[[pages]]
+path = "./syn_app/predictions_5methods.py"
+name = "Predictions"
+icon = "🧾"
+url_path = "predictions"
