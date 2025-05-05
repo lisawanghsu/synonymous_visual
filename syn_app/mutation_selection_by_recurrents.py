@@ -6,7 +6,7 @@ st.title('Visual Analysis of Synonymous Muations in Cancer')
 
 st.header('Synonymous Mutations in COSMIC v98')
 
-syn_mut_infos = pd.read_csv('syn_mut_COSMIC_v98_infos.zip')
+syn_mut_infos = pd.read_csv('COSMIC-V98-syns/syn_mut_COSMIC_v98_infos.zip')
 
 st.write(f'There are **{syn_mut_infos.shape[0]:,}** synonymous mutations in COSMIC v98. The first five rows:', syn_mut_infos.head())
 

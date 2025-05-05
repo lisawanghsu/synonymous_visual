@@ -10,7 +10,7 @@ st.markdown('''
 - MFDSMC   
 - EPEL              
    ''')
-pred = pd.read_csv('COSMIC-V98-driver-5predictors.zip')
+pred = pd.read_csv('pred-results-v98-syns/COSMIC-V98-driver-5predictors.zip')
 st.write(pred)
 
 #提供所有预测值的下载功能
@@ -31,7 +31,7 @@ with col3:
 with col4:
     alt_query = st.selectbox('ALT', list('ATCG'), index=None)
 
-syn_mut_infos = pd.read_csv('syn_mut_COSMIC_v98_infos.zip')
+syn_mut_infos = pd.read_csv('COSMIC-V98-syns/syn_mut_COSMIC_v98_infos.zip')
 if chrom_query and pos_query and ref_query and alt_query:
     query_result = syn_mut_infos[
         (syn_mut_infos['#CHROM'] == chrom_query) &
@@ -98,11 +98,11 @@ if input_data is not None and ((isinstance(input_data, pd.DataFrame) and not inp
         query_result = pd.merge(queries, syn_mut_infos, on=['#CHROM', 'POS', 'REF', 'ALT'], how='inner')
         
         if not query_result.empty:
-            st.write('😄Mutations found:')
+            st.write('😄Mutations found:',query_result.shape[0])
             st.dataframe(query_result)
             # 执行预测查询
             query_pred_result = pd.merge(queries, pred, on=['#CHROM', 'POS', 'REF', 'ALT'], how='inner')
-            st.write('😄Prediction results:')
+            st.write('😄Prediction results:',query_pred_result.shape)
             st.dataframe(query_pred_result)
         else:
             st.warning('😓No mutation found matching the query criteria.')
